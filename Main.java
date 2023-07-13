@@ -8,6 +8,7 @@ public class Main {
       char [] textArray = text.toCharArray();
       char [] patternArray = pattern.toCharArray();
       boolean matched = false;
+      int[] shiftTable = badCharPreprocess(patternArray);
 
       int i = 0;
       int j;
@@ -22,7 +23,7 @@ public class Main {
               matched = true;
           }
           else{
-              i+=1;  // Shift the pattern. I think this is where you edit the suffix thing in
+              i+= Math.max(1,patternArray.length - shiftTable[patternArray[j]] );  // Shift the pattern. I think this is where you edit the suffix thing in
           }
       }
       if(matched){
@@ -35,10 +36,17 @@ public class Main {
       }
     }
 
-   // public int[] badCharPreprocess(char[] patternArray){
-       // int shiftTable[] =
+    public static int[] badCharPreprocess(char[] patternArray){
+        int alphabetSize = 256;
+        int shiftTable[] = new int[alphabetSize];
 
-    //}
+        for(int i = 0;i < patternArray.length; i++){
+            shiftTable[patternArray[i]] = i;
+        }
+
+        return shiftTable;
+
+    }
 
 
 
