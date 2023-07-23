@@ -100,7 +100,6 @@ public class BoyerMoore2 {
         }
     }
 
-    // Function to preprocess the case 2 array for Boyer-Moore algorithm
     private static void preprocessCase2(int[] shift, int[] borderPos, int textLength) {
         int i, j;
         j = borderPos[0]; // Initialize j with the position of the first character with the same suffix
