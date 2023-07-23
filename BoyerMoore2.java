@@ -1,7 +1,6 @@
 import java.util.*;
 
 public class BoyerMoore2 {
-    static final int CHARS_NUM = 256;
 
     // Search for multiple patterns in a given text
     public static Map<String, List<Integer>> boyerMooreMultiPattern(String text, List<String> patterns) {
@@ -58,6 +57,7 @@ public class BoyerMoore2 {
 
 
     private static int[] preprocessBadCharacter(String pattern) {
+        int CHARS_NUM = 256;
         int[] badCharacter = new int[CHARS_NUM]; // Array to store the bad character shifts
         Arrays.fill(badCharacter, -1); //Fill the array with pattern length
 
