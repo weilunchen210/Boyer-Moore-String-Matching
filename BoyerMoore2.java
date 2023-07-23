@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class BoyerMoore2 {
+public class BoyerMoore {
 
     // Search for multiple patterns in a given text
     public static Map<String, List<Integer>> boyerMooreMultiPattern(String text, List<String> patterns) {
@@ -69,30 +69,30 @@ public class BoyerMoore2 {
         return badCharacter;
     }
 
-
     private static int[] preprocessGoodSuffixShift(String pattern) {
-        int[] borderPos = new int[pattern.length() + 1]; // Store positions of characters with same suffix as pattern[i:]
+        int[] borderPos = new int[pattern.length() + 1]; // Store positions of characters with the same suffix as pattern[i:]
         int[] shift = new int[pattern.length() + 1]; // Array to store the shifts for the good suffixes
-        Arrays.fill(shift,0); //Intialize all elements to 0
+        Arrays.fill(shift, 0); // Initialize all elements to 0
 
         // Preprocess the strong suffix array and case 2 array
-        preprocessStrongSuffix(shift, borderPos, pattern.toCharArray(), pattern.length());
-        preprocessCase2(shift, borderPos, pattern.length());
+        preprocessStrongSuffix(shift, borderPos, pattern);
+        preprocessCase2(shift, borderPos, pattern);
         return shift;
     }
 
-    private static void preprocessStrongSuffix(int[] shift, int[] borderPos, char[] pattern, int textLength) {
-        int i = textLength, j = textLength + 1;
-        borderPos[i] = j; // Initialize borderPos[textLength] to textLength+1
+    private static void preprocessStrongSuffix(int[] shift, int[] borderPos, String pattern) {
+        char[] patternArr = pattern.toCharArray();
+        int i = pattern.length(), j = pattern.length() + 1;
+        borderPos[i] = j; // Initialize borderPos[pattern.length()] to pattern.length()+1
 
         while (i > 0) {
             // Search for the first mismatch from the right end of the pattern
-            while (j <= textLength && pattern[i - 1] != pattern[j - 1]) {
+            while (j <= pattern.length() && patternArr[i - 1] != patternArr[j - 1]) {
                 // Record the shift for the current mismatch position (strong suffix)
                 if (shift[j] == 0) {
                     shift[j] = j - i;
                 }
-                j = borderPos[j]; // Move j to the position of next character with the same suffix
+                j = borderPos[j]; // Move j to the position of the next character with the same suffix
             }
             i--;
             j--;
@@ -100,17 +100,17 @@ public class BoyerMoore2 {
         }
     }
 
-    private static void preprocessCase2(int[] shift, int[] borderPos, int textLength) {
+    private static void preprocessCase2(int[] shift, int[] borderPos, String pattern) {
         int i, j;
         j = borderPos[0]; // Initialize j with the position of the first character with the same suffix
 
-        for (i = 0; i <= textLength; i++) {
+        for (i = 0; i <= pattern.length(); i++) {
             if (shift[i] == 0) {
                 // If shift[i] is not already assigned, assign the value of j (case 2)
                 shift[i] = j;
             }
             if (i == j) {
-                j = borderPos[j]; // Move j to the position of next character with the same suffix
+                j = borderPos[j]; // Move j to the position of the next character with the same suffix
             }
         }
     }
