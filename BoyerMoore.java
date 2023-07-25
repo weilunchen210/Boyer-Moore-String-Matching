@@ -84,7 +84,8 @@ public class BoyerMoore {
 
         return badCharacterMatrix;
     }
-
+    
+    // Preprocess good suffix
     private static int[] preprocessGoodSuffixShift(String pattern) {
         int[] borderPos = new int[pattern.length() + 1]; // Store positions of characters with the same suffix as pattern[i:]
         int[] shift = new int[pattern.length() + 1]; // Array to store the shifts for the good suffixes
