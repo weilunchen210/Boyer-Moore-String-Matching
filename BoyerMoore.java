@@ -70,7 +70,7 @@ public class BoyerMoore {
         for (int i = pattern.length() - 1; i >= 0; i--) {
             int[] character = badCharacterMatrix[pattern.charAt(i)];
             // Assigns value to the character based on their position from a certain point
-            // If i = 3 and the character is A, 4 will be assigned to row 65 and column 4
+            // For examplem, if i = 3 and the character is A, 4 will be assigned to row 65 and column 4
             character[i] = i + 1;
 
             int j = i;
@@ -132,10 +132,8 @@ public class BoyerMoore {
 
     public static void main(String[] args) {
         String text = "BANNNDABNDDDANANDADNANDDABDNENANRDDNEBNEDBNRNERNENENRNENRNENBNDANBAADNERNAADDSSADADADANABNAAANA";
-        //List<String> patterns = List.of("BNDANBAADN");
         List<String> patterns = List.of("ADAADA", "NEBNE","DAB");
-        //String text = "I love data structures & algorithms";
-        //List<String> patterns = List.of("data","algorithms","hate");
+
 
 
         System.out.println("Text: " + text);
