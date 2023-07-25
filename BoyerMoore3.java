@@ -20,7 +20,7 @@ public class BoyerMoore3 {
     public static List<Integer> boyerMoore(String text, String pattern) {
         List<Integer> occurrences = new ArrayList<>();
 
-        // Preprocess the bad character array and good suffix shift array
+        // Preprocess the bad character 2d matrix and good suffix shift array
         int[][] badCharacter = preprocessBadCharacter(pattern);
         int[] goodSuffixShift = preprocessGoodSuffixShift(pattern);
 
@@ -56,20 +56,26 @@ public class BoyerMoore3 {
     }
 
 
+    //Preprocess bad character
     private static int[][] preprocessBadCharacter(String pattern) {
+        // Makes a 2d matrix with 256 rows and number of column based on pattern length
         int[][] badCharacterMatrix = new int[256][pattern.length()];
-
+        // Assign -1 to every element in the 2d matrix
         for (int i = 0; i < 256; i++) {
             for (int j = 0; j < pattern.length();j++) {
                 badCharacterMatrix[i][j] = -1;
             }
         }
-
+        // For loop to preprocess the bad character table
         for (int i = pattern.length() - 1; i >= 0; i--) {
             int[] character = badCharacterMatrix[pattern.charAt(i)];
+            // Assigns value to the character based on their position from a certain point
+            // If i = 3 and the character is A, 4 will be assigned to row 65 and column 4
             character[i] = i + 1;
 
             int j = i;
+            // while loop to change the row to the right if its -1 as the character is still on the substring to the left
+            // of the mismatched character
             while (j < pattern.length() - 1 && character[j + 1] == -1) {
                 character[j + 1] = i + 1;
                 j++;
@@ -128,8 +134,8 @@ public class BoyerMoore3 {
 
     public static void main(String[] args) {
         String text = "BANNNDABNDDDANANDADNANDDABDNENANRDDNEBNEDBNRNERNENENRNENRNENBNDANBAADNERNAADDSSADADADANABNAAANA";
-        List<String> patterns = List.of("BNDANBAADN");
-
+        //List<String> patterns = List.of("BNDANBAADN");
+        List<String> patterns = List.of("ADAADA", "NEBNE","DAB");
         //String text = "I love data structures & algorithms";
         //List<String> patterns = List.of("data","algorithms","hate");
 
