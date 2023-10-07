@@ -1,3 +1,5 @@
+# Boyer-Moore String Matching Algorithm
+
 This repository contains a Java implementation of the Boyer-Moore string matching algorithm, which is a powerful and efficient algorithm for finding occurrences of one or more patterns in a given text.
 
 ## Table of Contents
