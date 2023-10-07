@@ -29,7 +29,7 @@ To use this code, follow these steps:
 1. Clone the repository to your local machine:
 
    ```bash
-   git clone [https://github.com/yourusername/your-repo-name.git](https://github.com/Fololorose/String-Matching.git)
+   git clone https://github.com/Fololorose/String-Matching.git
    ```
 
 2. Compile the Java code:
