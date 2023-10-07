@@ -8,7 +8,6 @@ This repository contains a Java implementation of the Boyer-Moore string matchin
 - [How to Use](#how-to-use)
 - [Algorithm Details](#algorithm-details)
 - [Contributing](#contributing)
-- [License](#license)
 
 ## Overview
 
@@ -49,10 +48,6 @@ The Boyer-Moore algorithm uses two preprocessing steps: bad character and good s
 ## Contributing
 
 Contributions are welcome! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
 
 ---
 
