@@ -1,8 +1,3 @@
-# Boyer-Moore String Matching Algorithm
-
-![GitHub last commit](https://img.shields.io/github/last-commit/yourusername/your-repo-name)
-![GitHub license](https://img.shields.io/github/license/yourusername/your-repo-name)
-
 This repository contains a Java implementation of the Boyer-Moore string matching algorithm, which is a powerful and efficient algorithm for finding occurrences of one or more patterns in a given text.
 
 ## Table of Contents
@@ -39,7 +34,7 @@ To use this code, follow these steps:
    java BoyerMoore
    ```
 
-4. You can customize the `text` and `patterns` variables in the `main` method to test different input data.
+4. You can customise the `text` and `patterns` variables in the `main` method to test different input data.
 
 ## Algorithm Details
 
