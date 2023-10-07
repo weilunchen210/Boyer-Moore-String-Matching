@@ -1,5 +1,5 @@
 # String-Matching
-Creating a README file for your GitHub repository is an excellent way to provide information about your code and how to use it. Below is a template for a README file for your Boyer-Moore string matching code:
+
 
 ---
 
@@ -64,4 +64,3 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ---
 
-Make sure to replace the placeholders (`yourusername` and `your-repo-name`) with your actual GitHub username and repository name. This README file provides an overview of the code, instructions on how to use it, details about the algorithm, and information on contributing and licensing. You can further customize it to suit your needs and provide more specific details about your implementation if necessary.
