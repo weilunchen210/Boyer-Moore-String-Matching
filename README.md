@@ -1,8 +1,3 @@
-# String-Matching
-
-
----
-
 # Boyer-Moore String Matching Algorithm
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/yourusername/your-repo-name)
