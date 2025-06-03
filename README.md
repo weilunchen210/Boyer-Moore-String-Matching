@@ -11,7 +11,7 @@ This repository contains a Java implementation of the Boyer-Moore string matchin
 
 ## Overview
 
-The Boyer-Moore algorithm is a versatile pattern matching technique that excels at searching for multiple patterns in a text. This implementation provides both single-pattern and multi-pattern search capabilities. It preprocesses the text and patterns to efficiently locate all occurrences of the specified patterns within the text.
+The Boyer-Moore algorithm is a versatile pattern matching technique that excels at searching for multiple patterns in a text. This implementation provides both single-pattern and multi-pattern search capabilities. It preprocesses the text and patterns to efficiently locate all occurrences of the specified patterns within the text. I was in charge of implementing the Bad Character Shift. 
 
 ## How to Use
 
@@ -20,7 +20,7 @@ To use this code, follow these steps:
 1. Clone the repository to your local machine:
 
    ```bash
-   git clone https://github.com/Fololorose/String-Matching.git
+   git clone https://github.com/weilunchen210/Boyer-Moore-String-Matching.git
    ```
 
 2. Compile the Java code:
@@ -45,9 +45,9 @@ The Boyer-Moore algorithm uses two preprocessing steps: bad character and good s
 
 - **Good Suffix Shift**: Preprocesses a shift array for good suffixes to optimize pattern matching.
 
-## Contributing
+## Credit
 
-Contributions are welcome! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request.
+Original Repository: https://github.com/Fololorose/String-Matching
 
 ---
 
