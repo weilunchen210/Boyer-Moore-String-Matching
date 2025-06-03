@@ -1,6 +1,6 @@
 # Boyer-Moore String Matching Algorithm
 
-This repository contains a Java implementation of the Boyer-Moore string matching algorithm, which is a powerful and efficient algorithm for finding occurrences of one or more patterns in a given text.
+This repository contains a Java implementation of the Boyer-Moore string matching algorithm, which is a powerful and efficient algorithm for finding occurrences of one or more patterns in a given text. I was in charge of implementing the Bad Character Shift. 
 
 ## Table of Contents
 
@@ -11,7 +11,7 @@ This repository contains a Java implementation of the Boyer-Moore string matchin
 
 ## Overview
 
-The Boyer-Moore algorithm is a versatile pattern matching technique that excels at searching for multiple patterns in a text. This implementation provides both single-pattern and multi-pattern search capabilities. It preprocesses the text and patterns to efficiently locate all occurrences of the specified patterns within the text. I was in charge of implementing the Bad Character Shift. 
+The Boyer-Moore algorithm is a versatile pattern matching technique that excels at searching for multiple patterns in a text. This implementation provides both single-pattern and multi-pattern search capabilities. It preprocesses the text and patterns to efficiently locate all occurrences of the specified patterns within the text. 
 
 ## How to Use
 
